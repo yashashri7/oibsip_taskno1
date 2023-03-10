@@ -1,0 +1,56 @@
+<html>
+   <head>
+   <body bgcolor="black">
+      <form>
+         <table align="center" bgcolor="black" border="3" cellspadding=5 cellspacing=5 height=200 width=200>
+            <tr>
+               <td align="center" colspan="4">
+                  <input type="text" name="input" id="input">
+               </td>
+            </tr>
+            <tr>
+               <td align="center"><input type="button" name="one" value="1" onclick="getinput(1)"></td>
+               <td align="center"><input type="button" name="two" value="2" onclick="getinput(2)"></td>
+               <td align="center"><input type="button" name="three" value="3" onclick="getinput(3)"></td>
+               <td align="center"><input type="button" name="plus" value="+" onclick="getinput('+')"></td>
+            </tr>
+            <tr>
+               <td align="center"><input type="button" name="four" value="4" onclick="getinput(4)"></td>
+               <td align="center"><input type="button" name="five" value="5" onclick="getinput(5)"></td>
+               <td align="center"><input type="button" name="six" value="6" onclick="getinput(6)"></td>
+               <td align="center"><input type="button" name="minus" value="-" onclick="getinput('-')"></td>
+            </tr>
+            <tr>
+               <td align="center"><input type="button" name="seven" value="7" onclick="getinput(7)"></td>
+               <td align="center"><input type="button" name="eight" value="8" onclick="getinput(8)"></td>
+               <td align="center"><input type="button" name="nine" value="9" onclick="getinput(9)"></td>
+               <td align="center"><input type="button" name="times" value="x" onclick="getinput('*')"></td>
+            </tr>
+            <tr>
+               <td align="center"><input type="button" name="clear" value="c" onclick="getinput('c')"></td>
+               <td align="center"><input type="button" name="zero" value="0" onclick="getinput(0)"></td>
+               <td align="center"><input type="button" name="equal" value="=" onclick="getinput('=')"></td>
+               <td align="center"><input type="button" name="div" value="/" onclick="getinput('/')"></td>
+            </tr>
+         </table>
+      </form>
+   </body>
+   <script>
+      var x=0;
+      function getinput(i)
+      {
+         var a=i;
+         switch(a)
+         {
+            case '=':document.getElementById('input').value=eval(document.getElementById('input').value);break;
+            case '+':document.getElementById('input').value+=i;break;
+            case '-':document.getElementById('input').value+=i;break;
+            case '*':document.getElementById('input').value+=i;break;
+            case '/':document.getElementById('input').value+=i;break;
+            case 'c':document.getElementById('input').value=' ';break;
+            default:document.getElementById('input').value+=i;break;
+         }
+      }
+   </script>
+   </head>
+</html>
